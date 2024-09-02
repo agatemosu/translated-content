@@ -1,28 +1,32 @@
 ---
-title: "::after (:after)"
+title: "::after"
 slug: Web/CSS/::after
+l10n:
+  sourceCommit: 4cb569f768ec9529724f8fb06539f2903a583a41
 ---
 
 {{CSSRef}}
 
-En CSS, **`::after`** crea un [pseudo-elemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}.Es en linea (inline) de forma predeterminada.
+En CSS, **`::after`** crea un [pseudoelemento](/es/docs/Web/CSS/Pseudo-elements) que es el último hijo del elemento seleccionado. Es comunmente usado para añadir contenido cosmético a un elemento con la propiedad {{CSSxRef("content")}}. Está en línea de forma predeterminada.
 
-```css
-/* Añdade una flecha después de los enlaces */
-a::after {
-  content: "→";
-}
-```
+{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
 
 > [!NOTE]
-> Los pseudo-elementos generados por `::before` y `::after` son [contenidos por la caja de formato del elemento](https://www.w3.org/TR/CSS2/generate.html#before-after-content), y por lo tanto no aplica a _[elementos reemplazados](/es/docs/Web/CSS/Replaced_element)_ como los elementos {{HTMLElement("img")}}, o {{HTMLElement("br")}}.
+> Los pseudoelementos generados por `::before` y `::after` son cajas en línea generadas como si fueran hijos inmediatos del elemento donde son aplicados, o el "elemento originario", y por lo tanto, no se puede aplicar a _[elementos reemplazados](/es/docs/Web/CSS/Replaced_element)_, como {{htmlelement("img")}}, donde sus contenidos son reemplazados y no son afectados por los estilos actuales del documento.
 
 ## Sintaxis
+
+```css-nolint
+::after {
+  content: /* valor */;
+  /* propiedades */
+}
+```
 
 {{CSSSyntax}}
 
 > [!NOTE]
-> CSS3 introdujo la notación `::after` (con doble dos puntos) para distinguir [pseudo-clases](/es/docs/Web/CSS/Pseudo-classes) de [pseudo-elementos](/es/docs/Web/CSS/Pseudo-elements). Los navegadores también aceptan `:after`, añadido en CSS2.
+> CSS introdujo la notación `::after` (con doble dos puntos) para distinguir las [pseudoclases](/es/docs/Web/CSS/Pseudo-classes) de los [pseudoelementos](/es/docs/Web/CSS/Pseudo-elements). Para compatibilidad con versiones anteriores, los navegadores también aceptan `:after`, introducido anteriormente.
 
 ## Ejemplos
 
